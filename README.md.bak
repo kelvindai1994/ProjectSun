@@ -1,1 +1,3 @@
-# Project_Sun
+# Project: Showing the Sun's position relative to user's input
+
+- In this project, users can provide longitude, latitude, time, date, and month as input and then simulate the position of the sun based on the given informations. 
