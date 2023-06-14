@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.18386836, g: 0.2290156, b: 0.3031127, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1806,8 +1806,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: -0.074333645, y: -0.7180292, z: 0.077657826, w: -0.6876611}
-  m_LocalPosition: {x: -16.829956, y: 8.636795, z: 2.0828285}
+  m_LocalRotation: {x: -0.18051139, y: -0.0056369305, z: 0.0010226499, w: -0.9835562}
+  m_LocalPosition: {x: -0.1039176, y: 5.8298187, z: -11.077194}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2032,14 +2032,13 @@ GameObject:
   - component: {fileID: 410087041}
   - component: {fileID: 410087040}
   - component: {fileID: 410087042}
-  - component: {fileID: 410087043}
   m_Layer: 0
-  m_Name: DirectionalLight
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &410087040
 Light:
   m_ObjectHideFlags: 0
@@ -2052,7 +2051,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2109,14 +2108,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
-  m_LocalRotation: {x: 0.01745245, y: 0, z: 0, w: 0.99984777}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
+  m_LocalPosition: {x: 0, y: 50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 2, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2137,22 +2136,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!114 &410087043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410087039}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8f9922d2ae5f0c4681a42da6fd29403, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interfaceControls: {fileID: 1142358857}
-  PillarTransform: {fileID: 0}
-  _distance: 100
-  moveSpeed: 0.5
 --- !u!1 &467826110
 GameObject:
   m_ObjectHideFlags: 0
@@ -5074,13 +5057,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1133529086}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8f9922d2ae5f0c4681a42da6fd29403, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c687707cc721204698e32ce47eaad7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interfaceControls: {fileID: 1142358857}
-  PillarTransform: {fileID: 811799137}
-  _distance: 30
-  moveSpeed: 1
+  Speed: 0.5
+  _maxIntensity: 500
+  _minIntensity: 300
 --- !u!1 &1142358854
 GameObject:
   m_ObjectHideFlags: 0
@@ -5125,9 +5108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1c3e17c3fd1ba4db0719d0632f2689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sun: {fileID: 1133529090}
   NavigationInput: {fileID: 219457423}
   Crosshair: {fileID: 1222187960}
-  _theSunPosition: {fileID: 1133529090}
   _cordinate: 99
   _date: {fileID: 298254018}
   _month: {fileID: 1797185293}

@@ -5,6 +5,8 @@ using System;
 
 public class InterfaceControls : MonoBehaviour
 {
+    [Header("Scrtips")]
+    public Sun Sun;
 
     [Header("CanvasGroup")]
     public CanvasGroup NavigationInput;
@@ -35,7 +37,10 @@ public class InterfaceControls : MonoBehaviour
 
 
     #region UnityFunctions
-
+    private void Awake()
+    {
+        Sun.enabled = false;
+    }
     void Update()
     {
         if (Input.GetKeyDown(_cordinate))
@@ -53,6 +58,7 @@ public class InterfaceControls : MonoBehaviour
     public void OnCalculateButtonClicked()
     {
         GetValueFromUser();
+        Sun.enabled = true;
     }
 
     public void OnCloseButtonClicked()
